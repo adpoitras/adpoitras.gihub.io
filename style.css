@@ -1,0 +1,186 @@
+
+body {
+  background-image: url("footer_lodyas.png");
+  margin: 0;
+}
+.toptoptop{
+  margin-bottom: 200px;
+}
+.toptop{
+  height:101px;
+  margin-bottom: -100px;
+  background: url(random_grey_variations.png) 0 0 repeat;
+}
+.top{
+  height:100px;
+  margin: 0 0 10px 0;
+  transform: skewY(-3deg);
+  transform-origin: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.top:before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 500%;
+  top:-150px;
+  z-index: -1;
+  transform: skewY(3deg);
+  background: url(random_grey_variations.png) 0 0 repeat;
+}
+@keyframes topcolor {
+    from {background-color:  #01A6CF;}
+    to {background-color:  #01C97A;}
+}
+
+.top:after{
+  content: "";
+  bottom:0;
+  width: 100%;
+  height:3px;
+  animation-name: topcolor;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  /*background-image: linear-gradient(to right, #000FFF  , #9BFDFF);*/
+  position: absolute;
+}
+.navspace{
+  padding-top: 0px;
+  top: -30px;
+  margin:0;
+  position:fixed;
+  transform-origin: 100%;
+  background-color: #1C2833  ;
+  width: 100%;
+  height: 50px;
+  z-index: 2;
+  transform: skewY(-3deg);
+  transform-origin: 100%;
+  box-shadow: 0 10px 10px black;
+}
+.navspace:before{
+  content: "";
+  position: absolute;
+  background-color: #1C2833  ;
+  height: 100px;
+  width:200%;
+  top:-95px;
+}
+.navbar {
+  top:0px;
+  background-color:inherit;
+  overflow:auto;
+  z-index:2;
+  color: white;
+  width: 100%;
+  margin:0 0 -10px 0;
+  height: 100%;
+} 
+.topa {
+  float: left;
+}
+
+.topa a {
+  display: block;
+  padding: 10px 40px  10px 40px;
+  text-decoration:none;
+  color:white;
+  font-family:'Oxygen', sans-serif;
+  font-weight:300;
+  font-style: italic;
+  font-size:20px;
+  transition-duration: 0.5s;
+}
+.topa a:hover {
+  background-color: #5D6D7E;
+  color: white;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  float:left;
+  color: white;
+}
+.centerp{
+  background-color: #1C2833;
+  width: 80%;
+  margin: auto;
+  color: white;
+  font-family:'Oxygen', sans-serif;
+  font-size: 120%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 70px;
+}
+.squareh{
+  font-size: 140%;
+  padding: 60px 55px 55px 55px;
+  background-color: #1C2833  ;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(to right, #01A6CF, #01C97A);
+
+}
+.squarep{
+  font-size: 140%;
+  padding: 15px 55px 15px 55px;
+  background-color: #1C2833  ;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(to right, #01A6CF, #01C97A);
+
+}
+.sideh{
+  width: 35%;
+  height: 400px;
+  margin: 0;
+  font-size: 140%;
+  padding: 0px;
+  background-color: #1C2833  ;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(to right, #01A6CF, #01C97A);
+
+}
+@font-face {
+    font-family: blyat;
+    src: url(kremlin.ttf);
+}
+.point{
+  width: 80%;
+  color: white;
+  margin: auto;
+  font-family:'Oxygen', sans-serif;
+  font-size: 300%;
+  overflow: hidden;
+  position: relative;
+}
+.horizp{
+  width: 90%;
+  position:relative;
+  padding-bottom:5%;
+  padding-top:5%;
+  text-align:center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.side{
+  height: 400px;
+}
+p{
+  padding: 60px 55px 55px 55px;
+}
+a{
+  color:white
+}
+a:hover{
+  color:#01C97A;
+}
