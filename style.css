@@ -1,6 +1,6 @@
 
 body {
-  background-image: url("footer_lodyas.png");
+  background-image: url("cartographer.webp");
   margin: 0;
 }
 .toptoptop{
@@ -27,7 +27,7 @@ body {
   top:-150px;
   z-index: -1;
   transform: skewY(3deg);
-  background: url(random_grey_variations.png) 0 0 repeat;
+  background: url(px_by_Gre3g.webp) 0 0 repeat;
 }
 @keyframes topcolor {
     from {background-color:  #01A6CF;}
