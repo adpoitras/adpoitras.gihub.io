@@ -184,3 +184,8 @@ a{
 a:hover{
   color:#01C97A;
 }
+.flex-container{
+  display:flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
