@@ -157,11 +157,9 @@ ul {
   font-size: 140%;
   padding: 15px 55px 15px 55px;
   background-color: #1C2833  ;
-  margin: auto;
   overflow: hidden;
-  position: relative;
   background: linear-gradient(to right, #01A6CF, #01C97A);
-
+ flex-basis: 300px;
 }
 .sideh{
   width: 35%;
@@ -201,17 +199,49 @@ ul {
 .side{
   height: 400px;
 }
-p{
-  padding: 60px 55px 55px 55px;
-}
+
 a{
   color:white
 }
 a:hover{
   color:#01C97A;
 }
+
+/*revised content containers*/
+
 .flex-container{
   display:flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: center;
+  margin-bottom: 70px;
+}
+
+.text-box{
+  background-color: #1C2833;
+  width: 80%;
+  color: white;
+  font-family:'Oxygen', sans-serif;
+  font-size: 120%;
+  overflow: hidden;
+  flex-basis: 500px;
+}
+.text-box p{
+  padding: 60px 55px 55px 55px;
+}
+
+.text-box-header{
+  font-size: 140%;
+  padding: 15px 55px 15px 55px;
+  background-color: #1C2833  ;
+  overflow: hidden;
+  background: linear-gradient(to right, #01A6CF, #01C97A);
+}
+
+.img-caption{
+  font-family:'Oxygen', sans-serif;
+  font-style: italic;
+  color: white;
+  font-size: 100%;
+  margin: auto ;
+  margin-top: 10px;
 }
