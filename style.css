@@ -46,13 +46,13 @@ body {
 
 
 .navspace{
-  padding-top: 0px;
+  padding-top: 50px;
   top: 0px;
   margin:0;
   position:fixed;
-  /*transform-origin: 100%;*/
+  transform-origin: 0% 100%;
   background-color: #1C2833  ;
-  width: 2000px;
+  width: 100%;
   height: 50px;
   z-index: 2;
   transform: skewY(-3deg);
@@ -84,15 +84,22 @@ body {
 .navbar {
   top:0px;
   background-color:inherit;
-  overflow:auto;
+  display:flex;
+  flex-flow: row nowrap;
   z-index:2;
   color: white;
   width: 100%;
   margin:0 0 -10px 0;
   height: 100%;
 } 
-.topa {
-  float: left;
+@media (max-width: 800px){
+  .navbar{
+    flex-wrap: wrap;
+    top: -30px;
+  }
+  .navspace{
+    height: 100px;
+  }
 }
 
 .topa a {
