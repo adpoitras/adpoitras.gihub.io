@@ -9,15 +9,17 @@ body {
 .toptop{
   height:101px;
   margin-bottom: -100px;
-  background: url(random_grey_variations.png) 0 0 repeat;
+  /*background: url(random_grey_variations.png) 0 0 repeat;*/
 }
 .top{
-  height:100px;
-  margin: 0 0 10px 0;
-  transform: skewY(-3deg);
+  height:120px;
+  margin: 0px 0 50px 0;
+  transform: skewY(3deg);
   transform-origin: 100%;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 5px 5px black ;
+  
 }
 .top:before {
   content: "";
@@ -25,42 +27,58 @@ body {
   width: 200%;
   height: 500%;
   top:-150px;
-  z-index: -1;
-  transform: skewY(3deg);
+  z-index: -2;
+  transform: skewY(-3deg);
   background: url(px_by_Gre3g.webp) 0 0 repeat;
+  
 }
+.top:after{
+  content: "";
+  box-shadow:0px -30px 30px 0px black inset;
+  height: 10px;
+  width: 100%;
+}
+
 @keyframes topcolor {
     from {background-color:  #01A6CF;}
     to {background-color:  #01C97A;}
 }
 
-.top:after{
+
+.navspace{
+  padding-top: 50px;
+  top: 0px;
+  margin:0;
+  position:fixed;
+  transform-origin: 0% 100%;
+  background-color: #1C2833  ;
+  width: 100%;
+  height: 50px;
+  z-index: 2;
+  transform: skewY(-3deg);
+  box-shadow: 0 10px 10px black;
+}
+.progressbar{
   content: "";
   bottom:0;
   width: 100%;
+  margin-top: 10px;
   height:3px;
+  z-index: 3;
   animation-name: topcolor;
   animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: linear;
   /*background-image: linear-gradient(to right, #000FFF  , #9BFDFF);*/
-  position: absolute;
 }
-.navspace{
-  padding-top: 0px;
-  top: -30px;
-  margin:0;
-  position:fixed;
-  transform-origin: 100%;
-  background-color: #1C2833  ;
+.progress-container{
   width: 100%;
-  height: 50px;
-  z-index: 2;
-  transform: skewY(-3deg);
-  transform-origin: 100%;
-  box-shadow: 0 10px 10px black;
+  z-index: 4;
+  height: 3px;
+  background-color: #1C2833  ;
 }
+
 .navspace:before{
   content: "";
   position: absolute;
@@ -72,15 +90,22 @@ body {
 .navbar {
   top:0px;
   background-color:inherit;
-  overflow:auto;
+  display:flex;
+  flex-flow: row nowrap;
   z-index:2;
   color: white;
   width: 100%;
   margin:0 0 -10px 0;
   height: 100%;
 } 
-.topa {
-  float: left;
+@media (max-width: 800px){
+  .navbar{
+    flex-wrap: wrap;
+    top: -30px;
+  }
+  .navspace{
+    height: 100px;
+  }
 }
 
 .topa a {
