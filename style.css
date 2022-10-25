@@ -178,7 +178,6 @@ ul {
     src: url(kremlin.ttf);
 }
 .point{
-  width: 80%;
   color: white;
   margin: auto;
   font-family:'Oxygen', sans-serif;
@@ -214,6 +213,11 @@ a:hover{
   flex-flow: row wrap;
   justify-content: center;
   margin-bottom: 70px;
+}
+.flex-container-vertical{
+  display:flex;
+  flex-flow: column nowrap;
+  
 }
 
 .text-box{
