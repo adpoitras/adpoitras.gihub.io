@@ -124,14 +124,7 @@ body {
   background-color: #5D6D7E;
   color: white;
 }
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  float:left;
-  color: white;
-}
+
 .centerp{
   background-color: #1C2833;
   width: 80%;
@@ -179,7 +172,6 @@ ul {
 }
 .point{
   color: white;
-  margin: auto;
   font-family:'Oxygen', sans-serif;
   font-size: 300%;
   overflow: hidden;
@@ -211,26 +203,28 @@ a:hover{
 .flex-container{
   display:flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: space-between;
   margin-bottom: 70px;
 }
 .flex-container-vertical{
+  width: 70%;
   display:flex;
   flex-flow: column nowrap;
-  
+  margin: auto;
 }
 
 .text-box{
   background-color: #1C2833;
-  width: 80%;
   color: white;
   font-family:'Oxygen', sans-serif;
   font-size: 120%;
   overflow: hidden;
-  flex-basis: 500px;
+  flex-basis: 600px;
+  flex-grow: 1;
+  position: relative;
 }
-.text-box p{
-  padding: 60px 55px 55px 55px;
+.text{
+  padding: 15px 55px 15px 55px;
 }
 
 .text-box-header{
@@ -246,6 +240,29 @@ a:hover{
   font-style: italic;
   color: white;
   font-size: 100%;
-  margin: auto ;
+  position: relative;
+  margin: auto;
   margin-top: 10px;
+}
+
+.subheader{
+  color: white;
+  font-family:'Oxygen', sans-serif;
+  font-size: 200%;
+  overflow: hidden;
+  position: relative;
+  /*border-bottom: 4px solid transparent;
+  border-image: linear-gradient(to right, #01A6CF, #01C97A) 20% stretch;*/
+  padding-bottom: 5px;
+}
+
+.smallheader{
+  color: white;
+  font-family:'Oxygen', sans-serif;
+  font-size: 200%;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 4px solid transparent;
+  border-image: linear-gradient(to right, #01A6CF, #01C97A) 20% stretch;
+  padding-bottom: 5px;
 }

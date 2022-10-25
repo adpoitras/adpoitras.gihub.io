@@ -1,54 +1,122 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Adrian Poitras</title>
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
-    <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400" rel="stylesheet">
-    <link rel="icon" href="fave.png" type="image/x-icon">
-    <!--<link rel="shortcut icon" href="fave.png" type="image/x-icon">-->
-    <script src="/scripts/scrollProgress.js"></script>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Adrian Poitras</title>
+  <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400" rel="stylesheet">
+  <link rel="icon" href="fave.png" type="image/x-icon">
+  <link rel="shortcut icon" href="fave.png" type="image/x-icon">
+  <script src="/scripts/scrollProgress.js"></script>
+</head>
+
+<body>
   <div class="toptoptop">
-  <div class="toptop">
-    <div class="navspace">
-		<div class="navbar">
-			<div class="topa"><a href="/index.html">Home</a></div>
-            <div class="topa"><a href="/scooters/scooters.html">Electric Scooters</a></div>
-            <div class="topa"><a href="/multirotors/multirotors.html">Multirotors</a></div>
-            <div class="topa"><a href="/turret/turret.html">Targeting Turret</a></div>
-		</div>
-        <div class="progress-container">
-            <div class="progressbar" id="myBar"></div>
+    <div class="toptop">
+      <div class="navspace">
+        <div class="navbar">
+          <div class="topa"><a href="/index.html">Home</a></div>
+          <div class="topa"><a href="/scooters/scooters.html">Electric Scooters</a></div>
+          <div class="topa"><a href="/multirotors/multirotors.html">Multirotors</a></div>
+          <div class="topa"><a href="/turret/turret.html">Targeting Turret</a></div>
         </div>
-	</div>
-    
+        <div class="progress-container">
+          <div class="progressbar" id="myBar"></div>
+        </div>
+      </div>
 
 
 
-    <div class="top">
+
+      <div class="top">
+      </div>
     </div>
   </div>
-  </div>
 
- <div class="flex-container-vertical">
-  <div class="point">
-    <h1>Electric Scooters</h1>
-  </div>
-  <div class="flex-container">
-    <div>
-      <img src="/scooters/Scooter Comparision.png">
+  <div class="flex-container-vertical">
+    <div class="point">
+      <h1>Electric Scooters</h1>
     </div>
-    <div class="text-box">
-      <div class="text-box-header">The Beginning</div>
-      <p>In the begninning there was one that ruled it all. Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, nobis. Aut perferendis pariatur laborum nisi rerum. Quaerat, cumque tempora perspiciatis reprehenderit perferendis dolor molestiae adipisci est. Voluptatem eligendi consequatur porro.</p>
+    <div class="flex-container">
+      <div>
+        <img src="/scooters/Scooter Comparision.png" style="padding-right: 55px;">
+        <p class="img-caption">(top to bottom) Mark I, II, and III electric scooters</p>
+      </div>
+
+      <div class="text-box">
+        <div class="text-box-header">Brief Overview</div>
+        <ul class="text">
+          <li> I created three electric scooters, with each one building on the skills I gained from the last</li>
+          <li> The first one was a high school project where I attached a brushless motor system to a Razor kick scooter
+          </li>
+          <li> The second one was an incremental upgrade from the first version, with the electronic parts from the
+            first
+            with a cnc aluminum body and a new battery</li>
+          <li> I used all the experience I gained building the first two to create the ultimate version</li>
+          <li> it features a fully custom chassis with front and rear pneumatic suspension, with power generated
+            by a 4.4 kW motor and a larger custom made battery</li>
+          <li> Versions 2 and 3 features an information screen powered by an arduino, with the third being a full color
+            LCD</li>
+        </ul>
+
+      </div>
     </div>
-  </div>
-  </div>
 
+    <div class="subheader">
+      <h2>Mark I: The First</h2>
+    </div>
 
-  </body>
+    <div class="flex-container">
+      <div class="text-box">
+        <div class="text-box-header">Starting Out</div>
+        <p class="text">When I first set out on creating my own electric scooter, I did not have much to work with. This
+          was
+          for a high school project, so I only had two months to do it. I had the experience with brushless motor
+          control from building
+          a quadcopter, though I did not have much knowledge in mechanical design. Nonetheless, I had a 3d printer and a
+          few ideas.
+        </p>
+        <p class="text">I immediately decided to retrofit a Razor kick scooter with motors, as building a whole scooter
+          was just simply
+          beyond my scope at the time. I had to work with the very small chassis, so most of my parts were "tacked on".
+          Initially I did not think
+          there was enough space to fit a chain sprocket assembly in the back, so the motor was connected to a small
+          drive wheel that was pressed
+          against the main wheel with a spring. This didn't really work, as the wheel would just spin and settle on a
+          groove. I then realized I could
+          fit a small chain in there with a custom 3d printed sprocket that directly interfaced with the wheel spoke
+          geometry.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex-container">
+      <div>
+        <h3 class="smallheader">Specifications</h3>
+        <div class="text-box">
+          <ul class="text">
+            <li>Motor: 3.5 kW brushless outrunner </li>
+            <li>speed controller: 60A VESC derivative</li>
+            <li>Battery: 5s 4200maH x2 in series</li>
+            <li>Wheels: 200 x 25 solid urethane</li>
+            <li>drivetrain: 3d printed sprockets, ~1.5 reduction</li>
+            <li>top speed: ~7 mph</li>
+            <li>max range: untested</li>
+            <li>Construction: 3D printed PLA</li>
+          </ul>
+
+        </div>
+      </div>
+      <div>
+        <img src="mk1render.png" style="width: 600px;">
+        <p class="img-caption">pictured: rear wheel assembly of MK.I</p>
+      </div>
+    </div>
+
+  </div>
+</body>
+
 </html>
