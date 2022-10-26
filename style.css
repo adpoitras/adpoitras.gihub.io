@@ -166,10 +166,7 @@ body {
   background: linear-gradient(to right, #01A6CF, #01C97A);
 
 }
-@font-face {
-    font-family: blyat;
-    src: url(kremlin.ttf);
-}
+
 .point{
   color: white;
   font-family:'Oxygen', sans-serif;
@@ -200,6 +197,8 @@ a:hover{
 
 /*revised content containers*/
 
+
+
 .flex-container{
   display:flex;
   flex-flow: row wrap;
@@ -211,6 +210,11 @@ a:hover{
   display:flex;
   flex-flow: column nowrap;
   margin: auto;
+}
+@media (max-width: 1820px){
+  .flex-container-vertical{
+    width: 85%;
+  }
 }
 
 .text-box{
