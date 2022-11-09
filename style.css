@@ -1,4 +1,7 @@
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-image: url("cartographer.webp");
   margin: 0;
@@ -206,7 +209,7 @@ a:hover{
   margin-bottom: 70px;
 }
 .flex-container-vertical{
-  max-width: 2000px;
+  max-width: 1600px;
   display:flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -246,7 +249,10 @@ a:hover{
   overflow: hidden;
   background: linear-gradient(to right, #01A6CF, #01C97A);
 }
-
+img{
+  max-width: 772px;
+  height: auto;
+}
 .img-caption{
   font-family:'Oxygen', sans-serif;
   font-style: italic;
@@ -254,7 +260,10 @@ a:hover{
   font-size: 100%;
   position: relative;
   margin: auto;
-  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: #363636;
 }
 
 .subheader{
@@ -277,4 +286,24 @@ a:hover{
   border-bottom: 4px solid transparent;
   border-image: linear-gradient(to right, #01A6CF, #01C97A) 20% stretch;
   padding-bottom: 5px;
+}
+.centerspace{
+  content: "";
+  width: 56px;
+}
+.spectable{
+  background-color: #1C2833;
+  color: white;
+  font-family:'Oxygen', sans-serif;
+  font-size: 120%;
+  overflow: hidden;
+  flex-grow: 1;
+  position: relative;
+}
+.spectable th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.spectable tr:nth-child(even){
+  background-color: #5D6D7E;
 }

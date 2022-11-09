@@ -42,80 +42,195 @@
     </div>
     <div class="flex-container">
       <div>
-        <img src="/scooters/Scooter Comparision.png" style="padding-right: 55px;">
+        <img src="/scooters/Scooter Comparision.png">
         <p class="img-caption">(top to bottom) Mark I, II, and III electric scooters</p>
       </div>
-
+      <div class="centerspace"></div>
       <div class="text-box">
-        <div class="text-box-header">Brief Overview</div>
+        <div class="text-box-header">Table of contents and introduction</div>
+        <p class="text">The goal of this project was to create my ultimate electric scooter. It spans three iterations with each version greatly different than the last. This project’s rigorous requirements challenged all of my skills. This report is split into the different subsections of the scooter with details about each version.</p>
         <ul class="text">
-          <li> I created three electric scooters, with each one building on the skills I gained from the last</li>
-          <li> The first one was a high school project where I attached a brushless motor system to a Razor kick scooter
-          </li>
-          <li> The second one was an incremental upgrade from the first version, with the electronic parts from the
-            first
-            with a cnc aluminum body and a new battery</li>
-          <li> I used all the experience I gained building the first two to create the ultimate version</li>
-          <li> it features a fully custom chassis with front and rear pneumatic suspension, with power generated
-            by a 4.4 kW motor and a larger custom made battery</li>
-          <li> Versions 2 and 3 features an information screen powered by an arduino, with the third being a full color
-            LCD</li>
+          <li><a href="#s1">Design Process and Timeline</a> </li>
+          <li><a href="#s2">Specification Comparison</a> </li>
+          <li><a href="#s3">Structure</a></li>
+          <li><a href="#s4">Powertrain</a></li>
+          <li><a href="#s5">Electronics</a></li>
+          <li><a href="#s6">Design Language</a></li>
+          <li><a href="#s7">Gallery</a></li>
         </ul>
-
       </div>
-    </div>
-
-    <div class="subheader">
-      <h2>Mark I: The First</h2>
     </div>
 
     <div class="flex-container">
       <div class="text-box">
-        <div class="text-box-header">Starting Out</div>
-        <p class="text">When I first set out on creating my own electric scooter, I did not have much to work with. This
-          was
-          for a high school project, so I only had two months to do it. I had the experience with brushless motor
-          control from building
-          a quadcopter, though I did not have much knowledge in mechanical design. Nonetheless, I had a 3d printer and a
-          few ideas.
-        </p>
-        <p class="text">I immediately decided to retrofit a Razor kick scooter with motors, as building a whole scooter
-          was just simply
-          beyond my scope at the time. I had to work with the very small chassis, so most of my parts were "tacked on".
-          Initially I did not think
-          there was enough space to fit a chain sprocket assembly in the back, so the motor was connected to a small
-          drive wheel that was pressed
-          against the main wheel with a spring. This didn't really work, as the wheel would just spin and settle on a
-          groove. I then realized I could
-          fit a small chain in there with a custom 3d printed sprocket that directly interfaced with the wheel spoke
-          geometry.
-        </p>
+        <div class="text-box-header" id="s1">Design Process and timeline</div>
+        <p class="text">The electric scooter project was one of my longest projects, with the first version built in 2019. The project initially began as a high school physics project, which meant I did not have much to work with. The structure was mainly 3d printed, right down to the chain sprockets. The scooter was not very robust and served better as a demonstration. To make a serious electric scooter, a stronger material was needed, such as aluminum.</p>
+        <p class="text">Allowing this change was the acquisition of a Shapeoko 3 router CNC, which would allow me to create precise aluminum parts. This led to the MKII, which retained the same power system and front fork as the MKI, but with a machined main chassis. The MKII was finished in the summer of 2020, with development taking about 6 months. This was a success, as the scooter was powerful and reliable, after a few teething issues. But I still sought more performance and was not fully satisfied, which led to the MKIII.</p>
+        <p class="text">The MKIII is as close my perfect scooter I can get, using all the lessons and skills I have learned building the first two. It features a fully bespoke aluminum frame, with front and rear suspension. Combing this with a powerful motor with a belt transmission results in a very smooth ride with immense power. Because of the greatly increased complexity of the scooter and college, development took around two years with multiple iterations to each subsystem. I could call the scooter in a finished and usable state in the fall of 2022, but development doesn’t ever end, does it?</p>
+      </div>
+    </div>
+
+    <div class="flex-container" style="margin-bottom: 15px;"><h3 class="smallheader" id="s2">Specifications</h3></div>
+
+    <div class="flex-container">
+      <table class="spectable">
+        <tr>
+          <th></th>
+          <th>MK.1</th>
+          <th>MK.2</th>
+          <th>Mk.3</th>
+        </tr>
+        <tr>
+          <th>Motor</th>
+          <th>3.5 kW brushless outrunner </th>
+          <th>3.5 kW brushless outrunner </th>
+          <th>4.4. kW sensored outrunner </th>
+        </tr>
+        <tr>
+          <th>Battery</th>
+          <th>5s 4200 mAh x2, series </th>
+          <th>10s 3p individual 18650 cell design, bolted construction</th>
+          <th>12s 3p individual 21700 cell design, spot welded</th>
+        </tr>
+        <tr>
+          <th>Drivetrain</th>
+          <th>Plastic sprockets, ANSI 25 chain</th>
+          <th>Steel and aluminum sprockets, ANSI 25 chain</th>
+          <th>2X gates GT3 5m belts, aluminum pulleys</th>
+        </tr>
+        <tr>
+          <th>Wheels</th>
+          <th>Solid Urethane 200x25</th>
+          <th>Front:200x25 pneumatic  Rear:200x50 pneumatic
+            </th>
+          <th>Both 200x50 pneumatic</th>
+        </tr>
+        <tr>
+          <th>Max range</th>
+          <th>Untested</th>
+          <th>5 mi
+            </th>
+          <th>10 mi</th>
+        </tr>
+      </table>
+      </div>
+
+
+
+    <div class="subheader" id="s3">
+      <h2>Structure</h2>
+    </div>
+
+    <div class="flex-container">
+      <div>
+        <img src="/placeholder.png">
+        <p class="img-caption">Testing the tensile strength on the main arms</p>
+      </div>
+      <div class="centerspace"></div>
+      <div class="text-box">
+        <div class="text-box-header">MK.1 - 3D Printed</div>
+        <p class="text">When first starting out on this project, I did not have many resources as this was primarily a high school project to be done in two months. I did have a 3d printer, and I decided to make all the parts using the 3d printer as it was very fast and easy. The MKI at its roots is two plastic arms that attached to the motor on top of the wheel. I tried multiple ways to couple the motor to the wheel, as it was difficult due to working with the small razor scooter frame. I first tried using a smaller urethane drive wheel that spun the wheel by friction, but soon switched to using ANSI 25 sprockets, which was also 3D printed.</p>
+        <p class="text">I needed to maximize the strength of the arms, so I experimented with multiple plastics, including PLA, PETG, and PC. I found that even though polycarbonate was stronger, it bent more than PLA, which made it unsuitable for this project. I then attempted to make aluminum arms with hand tools, but ultimately acquired the Shapeoko 3 CNC router.</p>
+      </div>
+    </div>
+
+    <div class="flex-container">
+      <div class="text-box">
+        <div class="text-box-header">MK.2, MK.3 - CNC</div>
+        <p class="text">The router CNC, equipped with a tungsten carbide end mill, was perfectly capable of machining aluminum alloys, which allowed me to greatly increase the scope of this project. The second and third scooters mainly used large ¼ and 1/8 plates, which plays to the strengths of the CNC router. </p>
+        <p class="text">The MKII had a machined deck assembly, which allowed a bigger battery to fit in. I was still growing accustomed to machining, so the CNC parts were simple. I used my experience with the MKII to construct the MKIII, which was much more involved.</p>
+        <p class="text">The MKIII features a fully bespoke frame and front and rear suspension. This necessitated much more ambitions CNC toolpaths which required multiple surfaces to be machined. The complicated parts such as the front suspension knuckles and the fork mount were machined out a 2 inch thick aluminum bar. In total, 30 parts had to be machined. to minimize weight, finite element analysis was used to determine an optimum shape.  Because the whole frame was designed, I could control factors such as wheel base and rake angle, where I increased the rake for stability.</p>
+      </div>
+      <div class="centerspace"></div>
+      <div>
+        <img src="/placeholder.png">
+        <p class="img-caption">Deck top of the MK.3</p>
+      </div>
+    </div>
+
+    <div class="flex-container">
+      <div class="text-box">
+        <div class="text-box-header">Suspension Considerations</div>
+        <p class="text">The pneumatic suspension of the MKIII ensures stability at high speeds, which was an issue with the MKII. Pneumatic suspension was specifically chosen to allow greater adjustment and control over behavior. The front shock has 41mm of travel and the rear shock has 20mm of travel. I had to carefully design the linkage geometry so that the front and rear wheels have the same amount of travel. Because of the limited space in the front, the linkage is like a double wishbone suspension, while the rear is a simple trailing arm. All the joints use shoulder screws with oil impregnated bushings. The limited space in the rear to fit a shock created an interesting packing problem for the belt powertrain, which is talked in the next section.</p>
+      </div>
+    </div>
+
+    <div class="subheader" id="s4">
+      <h2>Powertrain</h2>
+    </div>
+
+    <div class="flex-container">
+      <div class="text-box">
+        <div class="text-box-header">Battery Systems</div>
+        <p class="text">The MKI used two 5s li-po packs in serial to create a 30V battery pack, with a capacity of around 4 Ah. When creating the MKII, I knew I needed a much larger battery. The first custom battery I made used 18650 li-ion battery cells in a 10s3p configuration, which gave a capacity of around 12.5 Ah. Without a battery spot welder, I used a kit where the tabs were secured with nuts. This was easy, but meant the battery is not very space efficient. When designing the second battery for the MKIII, I got a proper battery spot welder, and 3d printed a cell frame that more efficiently packs the larger 21700 cells together in a 12s3p configuration, with 13.5 Ah capacity. The result of this is a battery smaller than the first one with more voltage and capacity. Both of the built batteries use a battery management system that balances each series section and adds over voltage and temperature protection.</p>
+      </div>
+      <div class="centerspace"></div>
+      <div>
+        <img src="/placeholder.png">
+        <p class="img-caption">MK.3 battery partially assembled</p>
+      </div>
+    </div>
+
+    <div class="flex-container">
+      <div class="text-box">
+        <div class="text-box-header">Power Transfer</div>
+        <p class="text">When choosing a way to transfer the motor torque to the wheels, ANSI 25 chain was selected due to the space restricted design of the MKI. The 3d printed sprockets of the MKI was not very durable, so the MKII had steel sprockets from Misumi. Because of the high wheel rpm, the chain was very noisy, and without an idler, would frequently fall off of the sprocket. </p>
+        <p class="text">When designing the MKIII, I wanted a much higher wheel reduction in order to have much more torque. The MKIII utilizes two Gates Powergrip GT3 belts, with four sprockets from Misumi. To deal with the trailing arm suspension, the two belts meet at a midaxle placed at the rotation point, allowing the belt to stay in constant tension with two idler pulleys. Earlier designs had an axle through the linkage joint and the pulleys but proved insufficient to handle the thrust loads of the rear wheel. </p>
+      </div>
+      <div class="centerspace"></div>
+      <div class="text-box">
+        <div class="text-box-header">Motor & Speed Controller</div>
+        <p class="text">The first two scooters shared the same 3.5kw outrunner motor. Due to the motor being designed for large scale RC planes, it did not have a sensor and had low torque at low speeds. The MKIII motor has more power and has a speed sensor, as it was specially designed for e vehicles. An issue is that the motor outputs 400w of waste heat at full power, which it can’t dissipate due to the sealed design. To remedy this, I machined a water block which attached to a radiator mounted on the scooter. </p>
       </div>
     </div>
 
     <div class="flex-container">
       <div>
-        <h3 class="smallheader">Specifications</h3>
-        <div class="text-box">
-          <ul class="text">
-            <li>Motor: 3.5 kW brushless outrunner </li>
-            <li>speed controller: 60A VESC derivative</li>
-            <li>Battery: 5s 4200maH x2 in series</li>
-            <li>Wheels: 200 x 25 solid urethane</li>
-            <li>drivetrain: 3d printed sprockets, ~1.5 reduction</li>
-            <li>top speed: ~7 mph</li>
-            <li>max range: untested</li>
-            <li>Construction: 3D printed PLA</li>
-          </ul>
-
-        </div>
+        <img src="/placeholder.png" style="max-width: 1600px; width: 1600px; height: 500px;">
+        <p class="img-caption">MK.3 dual belt powertrain</p>
       </div>
+    </div>
+    
+    <div class="subheader" id="s5">
+      <h2>Electronics</h2>
+    </div>
+
+    <div class="flex-container">
       <div>
-        <img src="mk1render.png" style="width: 600px;">
-        <p class="img-caption">pictured: rear wheel assembly of MK.I</p>
+        <img src="/placeholder.png">
+        <p class="img-caption">prototype MK.3 perfboard</p>
+      </div>
+      <div class="centerspace"></div>
+      <div class="text-box">
+        <div class="text-box-header">Arduino Speedometer</div>
+        <p class="text">At the end of developing the MKII, I decided to put a speedometer screen to show speed, charge, voltage. To obtain data, I used an Arduino which interfaced with the speed controller, via serial.  Because of the low power budget, an oled screen was chosen. Even though it was fast, the screen was not very bright in sunlight. For the MKIII, a full color tft was used which was much brighter and larger. Additionally, additional algorithms were coded into the MKIII to allow an odometer, miles range, and efficiency. The circuits were packaged using perfboards, which allowed more durability and compactness than breadboards. </p>
       </div>
     </div>
 
+    <div class="flex-container">
+      <div class="text-box">
+        <div class="text-box-header">Lighting</div>
+        <p class="text">Lighting was by far the most complicated system on the MKIII. Due to the higher power requirements, a separate high current 5v voltage rail was needed. The MKIII features a headlight, handlebar indicators, rear taillight and rear flasher. The headlight is a deconstructed bike light with a transistor attached to the button signal, allowing Arduino control. For the taillights, a separate Arduino was needed to allow proper serial communication. The system is controlled via a thumbstick attached to the handlebar. </p>
+      </div>
+      <div class="centerspace"></div>
+      <div>
+        <img src="/placeholder.png">
+        <p class="img-caption">MK.3 rear tailight design</p>
+      </div>
+    </div>
+
+    <div class="subheader" id="s6">
+      <h2>Design Language</h2>
+    </div>
+
+    <div class="flex-container">
+      <div class="text-box">
+        <p class="text">Throughout building each of these scooters, especially the MKII and III, I wanted to make the design as aesthetically pleasing to me as possible. This is a challenge due to how the scooters are constructed. Each part needs to be strong and structurally sound, while also meshing well with the design. I had to make concessions at places, of course, but in the end, I feel like I struck a nice balance. If you look very closely, you can see that the scooters have a base geometric shape. I wanted to keep the aluminum brushed finished, to create a sharp or raw look. To pursue cleaner lines, primarily countersunk screws were used in the MKIII. The centerpiece of the scooter is the baseplate/deck. In order to keep the aluminum finish, the deck has very small, machined steps around each part to ensure good grip. </p>
+      </div>
+    </div>
+
+    <div class="flex-container" style="margin-bottom: 15px;"><h3 class="smallheader" id="s7">Gallery</h3></div>
+    
   </div>
 </body>
 
