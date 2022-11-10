@@ -227,6 +227,9 @@ a:hover{
     align-items: center;
 
   }
+  .flex-container > div{
+    margin-top: 20px;
+  }
 }
 .text-box{
   background-color: #1C2833;
@@ -250,8 +253,13 @@ a:hover{
   background: linear-gradient(to right, #01A6CF, #01C97A);
 }
 img{
-  max-width: 772px;
+  width: 100%;
   height: auto;
+}
+.img-box{
+  flex-basis: 600px;
+  flex-grow: 1;
+  position: relative;
 }
 .img-caption{
   font-family:'Oxygen', sans-serif;
