@@ -229,6 +229,7 @@ a:hover{
   }
   .flex-container > div{
     margin-top: 20px;
+    overflow: visible;
   }
 }
 .text-box{
