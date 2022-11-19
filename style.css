@@ -245,7 +245,9 @@ a:hover{
 .text{
   padding: 15px 55px 15px 55px;
 }
-
+ul{
+  list-style-type: none;
+}
 .text-box-header{
   font-size: 140%;
   padding: 15px 55px 15px 55px;
