@@ -62,7 +62,7 @@
         <div class="text-box-header" id="s1">Design Process and timeline</div>
         <p class="text">The electric scooter project was one of my longest projects, with the first version built in 2019. The project initially began as a high school physics project, which meant I did not have much to work with. The structure was mainly 3d printed, right down to the chain sprockets. The scooter was not very robust and served better as a demonstration. To make a serious electric scooter, a stronger material was needed, such as aluminum.</p>
         <p class="text">Allowing this change was the acquisition of a Shapeoko 3 router CNC, which would allow me to create precise aluminum parts. This led to the MKII, which retained the same power system and front fork as the MKI, but with a machined main chassis. The MKII was finished in the summer of 2020, with development taking about 6 months. This was a success, as the scooter was powerful and reliable, after a few teething issues. But I still sought more performance and was not fully satisfied, which led to the MKIII.</p>
-        <p class="text">The MKIII is as close my perfect scooter I can get, using all the lessons and skills I have learned building the first two. It features a fully bespoke aluminum frame, with front and rear suspension. Combing this with a powerful motor with a belt transmission results in a very smooth ride with immense power. Because of the greatly increased complexity of the scooter and college, development took around two years with multiple iterations to each subsystem. I could call the scooter in a finished and usable state in the fall of 2022, but development doesn’t ever end, does it?</p>
+        <p class="text">The MKIII is as close to my perfect scooter as I can get, using all the lessons and skills I have learned building the first two. It features a fully bespoke aluminum frame, with front and rear suspension. Combining this with a powerful motor with a belt transmission results in a very smooth ride with immense power. Because of the greatly increased complexity of the scooter and college responsibilities, development took around two years with multiple iterations to each subsystem. I could call the scooter in a finished and usable state in the fall of 2022, but development doesn’t ever end, does it?</p>
       </div>
     </div>
 
@@ -147,7 +147,7 @@
     <div class="flex-container">
       <div class="text-box">
         <div class="text-box-header">Suspension Considerations</div>
-        <p class="text">The pneumatic suspension of the MKIII ensures stability at high speeds, which was an issue with the MKII. Pneumatic suspension was specifically chosen to allow greater adjustment and control over behavior. The front shock has 41mm of travel and the rear shock has 20mm of travel. I had to carefully design the linkage geometry so that the front and rear wheels have the same amount of travel. Because of the limited space in the front, the linkage is like a double wishbone suspension, while the rear is a simple trailing arm. All the joints use shoulder screws with oil impregnated bushings. The limited space in the rear to fit a shock created an interesting packing problem for the belt powertrain, which is talked in the next section.</p>
+        <p class="text">The pneumatic suspension of the MKIII ensures stability at high speeds, which was an issue with the MKII. Pneumatic suspension was specifically chosen to allow greater adjustment and control over behavior. The front shock has 41mm of travel and the rear shock has 20mm of travel. I had to carefully design the linkage geometry so that the front and rear wheels have the same amount of travel. Because of the limited space in the front, the linkage is like a double wishbone suspension, while the rear is a simple trailing arm. All the joints use shoulder screws with oil impregnated bushings. The limited space in the rear to fit a shock created an interesting packing problem for the belt powertrain, which is discussed in the next section.</p>
       </div>
     </div>
 
@@ -170,13 +170,13 @@
     <div class="flex-container">
       <div class="text-box">
         <div class="text-box-header">Power Transfer</div>
-        <p class="text">When choosing a way to transfer the motor torque to the wheels, ANSI 25 chain was selected due to the space restricted design of the MKI. The 3d printed sprockets of the MKI was not very durable, so the MKII had steel sprockets from Misumi. Because of the high wheel rpm, the chain was very noisy, and without an idler, would frequently fall off of the sprocket. </p>
+        <p class="text">When choosing a way to transfer the motor torque to the wheels, ANSI 25 chain was selected due to the space restricted design of the MKI. The 3d printed sprockets of the MKI were not very durable, so the MKII had steel sprockets from Misumi. Because of the high wheel rpm, the chain was very noisy, and without an idler, would frequently fall off of the sprocket. </p>
         <p class="text">When designing the MKIII, I wanted a much higher wheel reduction in order to have much more torque. The MKIII utilizes two Gates Powergrip GT3 belts, with four sprockets from Misumi. To deal with the trailing arm suspension, the two belts meet at a midaxle placed at the rotation point, allowing the belt to stay in constant tension with two idler pulleys. Earlier designs had an axle through the linkage joint and the pulleys but proved insufficient to handle the thrust loads of the rear wheel. </p>
       </div>
       <div class="centerspace"></div>
       <div class="text-box">
         <div class="text-box-header">Motor & Speed Controller</div>
-        <p class="text">The first two scooters shared the same 3.5kw outrunner motor. Due to the motor being designed for large scale RC planes, it did not have a sensor and had low torque at low speeds. The MKIII motor has more power and has a speed sensor, as it was specially designed for e vehicles. An issue is that the motor outputs 400w of waste heat at full power, which it can’t dissipate due to the sealed design. To remedy this, I machined a water block which attached to a radiator mounted on the scooter. </p>
+        <p class="text">The first two scooters shared the same 3.5kw outrunner motor. Due to the motor being designed for large scale RC planes, it did not have a sensor and had low torque at low speeds. The MKIII motor has more power and has a speed sensor, as it was specially designed for e vehicles. An issue is that the motor outputs 400w of waste heat at full power, which it cannot dissipate due to the sealed design. To remedy this, I machined a water block which attached to a radiator mounted on the scooter. </p>
       </div>
     </div>
 
@@ -199,7 +199,7 @@
       <div class="centerspace"></div>
       <div class="text-box">
         <div class="text-box-header">Arduino Speedometer</div>
-        <p class="text">At the end of developing the MKII, I decided to put a speedometer screen to show speed, charge, voltage. To obtain data, I used an Arduino which interfaced with the speed controller, via serial.  Because of the low power budget, an oled screen was chosen. Even though it was fast, the screen was not very bright in sunlight. For the MKIII, a full color tft was used which was much brighter and larger. Additionally, additional algorithms were coded into the MKIII to allow an odometer, miles range, and efficiency. The circuits were packaged using perfboards, which allowed more durability and compactness than breadboards. </p>
+        <p class="text">At the end of developing the MKII, I decided to put a speedometer screen to show speed, charge, voltage. To obtain data, I used an Arduino which interfaced with the speed controller, via serial.  Because of the low power budget, an oled screen was chosen. Even though it was fast, the screen was not very bright in sunlight. For the MKIII, a full color tft was used which was much brighter and larger. Additionally, more algorithms were coded into the MKIII to allow an odometer, miles range, and efficiency. The circuits were packaged using perfboards, which allowed more durability and compactness than breadboards. </p>
       </div>
     </div>
 
